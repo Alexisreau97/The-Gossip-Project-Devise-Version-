@@ -1,5 +1,6 @@
-<h1>Les gossips</h1>
-<p>Voici tous les gossips</p>
+<h1>Salut moussaillon <%= current_moussaillon.username %> !</h1>
+
+<h2>Voici tous les gossips</h2>
         <% @gossip.each do |gossip| %>
             <%= gossip.content %>
                 <a href="<%= gossip_path(gossip.id) %>" class="btn btn-dark">Voir le gossip</a>
