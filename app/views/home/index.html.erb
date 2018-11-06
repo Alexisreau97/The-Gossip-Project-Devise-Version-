@@ -1,14 +1,14 @@
 <% if moussaillon_signed_in? %>
 
-	<h1>Salut moussaillon</h1>
+	<h1>Salut moussaillon <%= current_moussaillon.username %> !</h1>
 
-		<%= link_to "Sign out", destroy_moussaillon_session_path, method: :delete, class: "btn btn-danger" %>
+		<%= link_to "Déconnection", destroy_moussaillon_session_path, method: :delete, class: "btn btn-danger" %>
 
 		<% else %>
 
-		<h1>Salut inscris-toi</h1>
+		<h1>Hey bro connecte-toi ou inscris-toi !</h1>
 		
-			<%= link_to "Sign in", new_moussaillon_session_path, class: "btn btn-primary" %>
-			<%= link_to "Sign up", new_moussaillon_registration_path, class: "btn btn-primary" %>
+			<%= link_to "Connection", new_moussaillon_session_path, class: "btn btn-primary" %>
+			<%= link_to "S'inscrire", new_moussaillon_registration_path, class: "btn btn-primary" %>
 
 <% end %>
