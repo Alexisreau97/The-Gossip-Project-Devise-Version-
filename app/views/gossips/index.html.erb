@@ -1,0 +1,9 @@
+<h1>Les gossips</h1>
+<p>Voici tous les gossips</p>
+        <% @gossip.each do |gossip| %>
+            <%= gossip.content %>
+                <a href="<%= gossip_path(gossip.id) %>" class="btn btn-dark">Voir le gossip</a>
+                <a href="<%= edit_gossip_path(gossip.id) %>" class="btn btn-default">Éditer</a>
+        <% end %>
+    </tbody>
+</table>
