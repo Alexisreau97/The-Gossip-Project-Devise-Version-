@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #177ea4;">
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #6967ce;">
   <%= link_to "The Gossip Project (devise version)", root_path, :class => "navbar-brand"%>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -8,6 +8,7 @@
     <ul class="navbar-nav">
 
       <% if moussaillon_signed_in? %>
+        <li class="nav-item active"><%= link_to "Nouveau gossip", new_gossip_path, class: "nav-link" %></li>
         <li class="nav-item active"><%= link_to "Déconnexion", destroy_moussaillon_session_path, method: :delete, :class => "nav-link"%></li>
 
         <% else %>
